@@ -18,7 +18,6 @@ if [ ! -s $file ]; then
 else
 echo "Your current todo.txt"
 cat $file
-sleep 4
 fi
 
 echo "What would you like to add to your todo list?"
