@@ -1,6 +1,15 @@
 #!/bin/bash
 #Made by Gregoryx12 aka TheShadowFog
+#Edit below
 file=~/todo.txt
+
+if [ ! -s $file ]; then
+    echo "$file is empty" 
+else
+echo "Your current todo.txt"
+cat $file
+fi
+
 
 if [ -f $file ]
 	then
@@ -12,12 +21,12 @@ fi
 while :
 	do
 
-if [ ! -s $file ]; then
-    echo "$file is empty" >> /dev/null 2>&1
-else
-echo "Your current todo.txt"
-cat $file
-fi
+#if [ ! -s $file ]; then
+#    echo "$file is empty" 
+#else
+#echo "Your current todo.txt"
+#cat $file
+#fi
 
 echo "What would you like to add to your todo list?"
 read todotext 
