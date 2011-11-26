@@ -5,10 +5,10 @@
 file=~/todo.txt
 
 if type -P zenity >/dev/null; then
-echo  "zenity is Installed" >> /dev/null 2>&1
+echo "zenity is Installed" >> /dev/null 2>&1
 elif [ -f /etc/arch-release ] ; then
 sudo pacman -S zenity
-else [ -f /etc/debian_release]
+else [ -f /etc/lsb-release]
 sudo apt-get install zenity
 fi
 
@@ -27,7 +27,7 @@ echo $todotext >> $file
 if zenity --question --text="Do you want to add anything else?"; then
 echo blah >> /dev/null 2>&1
 else
-zenity --info --text "Your todo list is located at: $file"
+#zenity --info --text "Your todo list is located at: $file"
 exit
 fi
 
