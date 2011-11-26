@@ -1,6 +1,5 @@
 #!/bin/bash
-#Made by Gregoryx12
-
+#Made by Gregoryx12 aka TheShadowFog
 file=~/todo.txt
 
 if [ -f $file ]
