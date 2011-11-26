@@ -1,4 +1,6 @@
 #!/bin/bash
+#Made by Gregoryx12
+
 file=~/todo.txt
 
 if [ -f $file ]
