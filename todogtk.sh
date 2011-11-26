@@ -1,5 +1,6 @@
 #!/bin/bash
 #Made by Gregoryx12 aka TheShadowFog
+#if you want the cli version, use todo.sh
 #Edit below
 file=~/todo.txt
 
