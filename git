@@ -1,6 +1,5 @@
 #!/bin/bash
 git add * 
-git commit
 git commit -m 'Changed some stuff.'
 git push 
 
