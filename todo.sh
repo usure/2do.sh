@@ -13,21 +13,13 @@ fi
 
 if [ -f $file ]
 	then
-echo file exists  /dev/null >> /dev/null 2>&1
+echo exists >> /dev/null 2>&1
 	else
 touch file
 fi
 
 while :
 	do
-
-#if [ ! -s $file ]; then
-#    echo "$file is empty" 
-#else
-#echo "Your current todo.txt"
-#cat $file
-#fi
-
 echo "What would you like to add to your todo list?"
 read todotext 
 echo $todotext >> $file
