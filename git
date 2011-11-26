@@ -1,7 +1,6 @@
 #!/bin/bash
-git add * -u
-git remote add origin git@github.com:Gregoryx12/2do.sh.git
-#git commit
+git add * 
+git commit
 git commit -m 'Changed some stuff.'
 git push 
 
