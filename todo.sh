@@ -31,9 +31,19 @@ addmore=$yesorno
 
 if [ "$yesorno" == "yes" ]; then
 echo "What would you like to add to your todo list?"  >> /dev/null 2>&1
-#read todotext 
-#echo $todotext >> todo.txt
+elif [ "$yesorno" = "Yes" ] ; then
+echo "What would you like to add to your todo list?"  >> /dev/null 2>&1
+elif [ "$yesorno" = "Yes." ]; then
+echo "What would you like to add to your todo list?"  >> /dev/null 2>&1
+ elif [ "$yesorno" == "No" ]; then
+exit
+  elif [ "$yesorno" == "No." ]; then
+exit 
   elif [ "$yesorno" == "no" ]; then
+exit
+  elif [ "$yesorno" == "NO" ]; then
+exit
+else
 exit
   fi
 
