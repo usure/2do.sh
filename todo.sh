@@ -5,24 +5,25 @@
 file=~/todo.txt
 
 if [ ! -s $file ]; then
-    echo "$file is empty" 
+echo "$file is empty"
 else
 echo "Your current todo.txt"
-cat $file
+#cat $file
+nl $file
 fi
 
 
 if [ -f $file ]
-	then
+then
 echo exists >> /dev/null 2>&1
-	else
+else
 touch file
 fi
 
 while :
-	do
+do
 echo "What would you like to add to your todo list?"
-read todotext 
+read todotext
 echo $todotext >> $file
 
 echo "Do you want to add anything else?"
@@ -32,11 +33,12 @@ read yesorno | tr '[a-z]' '[A-Z]'
 if [ "$yesorno" == "YES" ]; then
 >> /dev/null 2>&1
   elif [ "$yesorno" == "NO" ]; then
-	exit
+exit
 else
-	exit
-  fi
+exit
+fi
 
 done
+
 
 
