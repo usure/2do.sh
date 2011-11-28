@@ -26,25 +26,15 @@ read todotext
 echo $todotext >> $file
 
 echo "Do you want to add anything else?"
-read yesorno
-addmore=$yesorno
+read yesorno | tr '[a-z]' '[A-Z]'
 
-if [ "$yesorno" == "yes" ]; then
-echo "What would you like to add to your todo list?"  >> /dev/null 2>&1
-elif [ "$yesorno" = "Yes" ] ; then
-echo "What would you like to add to your todo list?"  >> /dev/null 2>&1
-elif [ "$yesorno" = "Yes." ]; then
-echo "What would you like to add to your todo list?"  >> /dev/null 2>&1
- elif [ "$yesorno" == "No" ]; then
-exit
-  elif [ "$yesorno" == "No." ]; then
-exit 
-  elif [ "$yesorno" == "no" ]; then
-exit
+
+if [ "$yesorno" == "YES" ]; then
+>> /dev/null 2>&1
   elif [ "$yesorno" == "NO" ]; then
-exit
+	exit
 else
-exit
+	exit
   fi
 
 done
