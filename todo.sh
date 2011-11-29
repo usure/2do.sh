@@ -1,6 +1,7 @@
 #!/bin/bash
 #Made by Gregoryx12 aka TheShadowFog
 #if you want to use the GTK version. Run todogtk.sh
+#Read LICENSE
 #Edit below
 file=~/todo.txt
 
@@ -27,18 +28,17 @@ read todotext
 echo $todotext >> $file
 
 echo "Do you want to add anything else?"
-read yesorno | tr '[a-z]' '[A-Z]'
+read yesorno
+addmore=$yesorno
 
-
-if [ "$yesorno" == "YES" ]; then
->> /dev/null 2>&1
-  elif [ "$yesorno" == "NO" ]; then
+if [ "$yesorno" == "yes" ]; then
+echo "What would you like to add to your todo list?"  >> /dev/null 2>&1
+#read todotext 
+#echo $todotext >> todo.txt
+  elif [ "$yesorno" == "no" ]; then
 exit
 else
 exit
-fi
+  fi
 
 done
-
-
-
