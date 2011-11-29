@@ -31,11 +31,11 @@ echo "Do you want to add anything else?"
 read yesorno
 addmore=$yesorno
 
-if [ "$yesorno" == "yes" ]; then
+if [ "${yesorno^^*}" == "YES" ]; then
 echo "What would you like to add to your todo list?"  >> /dev/null 2>&1
 #read todotext 
 #echo $todotext >> todo.txt
-  elif [ "$yesorno" == "no" ]; then
+  elif [ "${yesorno^^*}" == "NO" ]; then
 exit
 else
 exit
