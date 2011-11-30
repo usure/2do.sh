@@ -13,11 +13,19 @@ case "$1" in
      > $file
      exit
     ;;
+    add)
+     echo $2 >> $file
+     exit
+    ;;
+
+
   help)
    echo "You may run: "
+    echo "./todo.sh add"
     echo "./todo.sh edit"
     echo "./todo.sh clear"
-     exit
+    echo "./todo.sh help"
+    exit
     ;;
 
 
