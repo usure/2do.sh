@@ -1,7 +1,6 @@
 #!/bin/bash
 #Made by Gregoryx12 aka TheShadowFog
 #if you want to use the GTK version. Run todogtk.sh
-#Read LICENSE
 #Edit below
 file=~/todo.txt
 case "$1" in
