@@ -4,6 +4,17 @@
 #Read LICENSE
 #Edit below
 file=~/todo.txt
+case "$1" in
+  edit)
+        nano $file
+         ;;
+  clear)
+     > $file
+    ;;
+esac
+
+#exit 0
+
 
 if [ ! -s $file ]; then
 echo "$file is empty"
@@ -32,7 +43,7 @@ read yesorno
 addmore=$yesorno
 
 if [ "${yesorno^^*}" == "YES" ]; then
-echo "What would you like to add to your todo list?"  >> /dev/null 2>&1
+echo "Ok"  >> /dev/null 2>&1
 #read todotext 
 #echo $todotext >> todo.txt
   elif [ "${yesorno^^*}" == "NO" ]; then
@@ -42,3 +53,7 @@ exit
   fi
 
 done
+
+
+
+
