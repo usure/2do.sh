@@ -13,6 +13,14 @@ case "$1" in
      > $file
      exit
     ;;
+  help)
+   echo "You may run: "
+    echo "./todo.sh edit"
+    echo "./todo.sh clear"
+     exit
+    ;;
+
+
 esac
 
 #exit 0
