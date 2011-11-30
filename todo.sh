@@ -7,9 +7,11 @@ file=~/todo.txt
 case "$1" in
   edit)
         nano $file
-         ;;
+        exit  
+	;;
   clear)
      > $file
+     exit
     ;;
 esac
 
