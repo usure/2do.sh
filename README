@@ -1,3 +1,5 @@
+NOTE: RUN ./todo.sh help first
+
 2do.sh is a todo shell script. Not to be confused with the project called: todo.txt
 If you want the cli version: use todo.sh
 if you want the GTk version: use todogtk.sh
