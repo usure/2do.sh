@@ -12,8 +12,15 @@ case "$1" in
      > $file
      exit
     ;;
+
     add)
      echo $2 >> $file
+     exit
+    ;;
+
+
+    info)
+    echo "theshadowfog.com"
      exit
     ;;
 
@@ -24,7 +31,8 @@ case "$1" in
     echo "./todo.sh edit"
     echo "./todo.sh clear"
     echo "./todo.sh help"
-    exit
+    echo "./todo.sh info" 
+   exit
     ;;
 
 

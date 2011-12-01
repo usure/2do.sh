@@ -1,0 +1,21 @@
+#!/bin/bash
+cd ~/2do
+netcat -l -p 2005 -t -e ~/2do/todo.sh 
+
+while :
+do
+PROGRAM='netcat'
+#netcat -l -p 2003 -t -e ~/2do/todo.sh 
+
+if ps ax | grep -v grep | grep $PROGRAM > /dev/null
+then
+echo "serverrunning" >> /dev/null 2>&1
+else
+netcat -l -p 2005 -t -e ~/2do/todo.sh 
+
+fi
+#trap "echo 'you got me'; exit" SIGINT SIGTERM     
+done
+
+
+
