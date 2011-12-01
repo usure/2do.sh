@@ -23,6 +23,7 @@ other: source.
 Then run:
 ncat -t -l 1234 --keep-open --sh-exec "~/2do/todo.sh"
 
+I also included the ncat standalone binary in the server DIR.
 
 Note: Please do not commit files until you are sure that they are free of any major bugs.
 
