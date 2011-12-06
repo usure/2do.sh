@@ -8,6 +8,11 @@ case "$1" in
         nano $file
         exit  
 	;;
+   view)
+       cat $file
+        exit  
+        ;;
+
   clear)
      > $file
      exit
