@@ -18,10 +18,10 @@ case "$1" in
      exit
     ;;
 
-#    add)
- #    echo "$2 $3 $4 $5 $6 $7 $8 $9 $10 $11 $12 $13 $14 $15" >> $file
-  #   exit
-  #  ;;
+    add)
+    echo "$2" >> $file
+   exit
+  ;;
 
 
     info)
