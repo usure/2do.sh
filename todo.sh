@@ -18,8 +18,8 @@ case "$1" in
      exit
     ;;
 
-    add)
-    echo "$2" >> $file
+    add)    
+echo "$2" >> $file
    exit
   ;;
 
@@ -37,12 +37,12 @@ case "$1" in
     echo "./todo.sh clear"
     echo "./todo.sh help"
     echo "./todo.sh info" 
+    echo "Please use quotes when you use the add command."
    exit
     ;;
 
 
 esac
-
 #exit 0
 
 
@@ -83,7 +83,5 @@ exit
   fi
 
 done
-
-
 
 
