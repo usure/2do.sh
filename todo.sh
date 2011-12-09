@@ -4,7 +4,6 @@ o#!/bin/bash
 #Edit below
 file=~/todo.txt
 case "$1" in
-if [ "$1" == "" ]; then
  
  edit)
    nano $file

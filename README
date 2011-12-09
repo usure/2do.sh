@@ -13,7 +13,6 @@ TheShadowFog (Gregoryx12)
 
 
 
-The file called git is a shell script I made for myself to make it eaiser to commit changes. Feel free to use it.
 
 Also. If you want to run a 'todo server' then install: nmap
 debian: sudo apt-get install nmap
