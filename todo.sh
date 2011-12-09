@@ -1,15 +1,17 @@
-#!/bin/bash
+o#!/bin/bash
 #Made by Gregoryx12 aka TheShadowFog
 #if you want to use the GTK version. Run todogtk.sh
 #Edit below
 file=~/todo.txt
 case "$1" in
-  edit)
-        nano $file
+if [ "$1" == "" ]; then
+ 
+ edit)
+   nano $file
         exit  
 	;;
    view)
-       cat $file
+       nano $file
         exit  
         ;;
 
