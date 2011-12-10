@@ -1,10 +1,20 @@
 #!/bin/bash
 #Made by Gregoryx12 aka TheShadowFog
 #if you want to use the GTK version. Run todogtk.sh
+#Thanks to the many people on stack overflow. :P
 #Edit below
+
 #basename $0
 #file=~/basename $0.txt
 #DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+#if [ -z "${EDITOR+xxx}" ]; then echo VAR is not set at all; fi
+#if [ -z "${VISUAL+xxx}" ]; then echo VAR is not set at all; fi
+var_defined() {
+    local var_name=$1
+    set | grep "^${var_name}=" 1>/dev/null
+    return $?
+}
+
 if [ -f ~/$BASH_SOURCE.txt ]
 then
 echo exists >> /dev/null 2>&1
@@ -15,11 +25,36 @@ fi
 case "$1" in
  
  edit)
-   nano ~/$BASH_SOURCE.txt
+#if [ -z "${EDITOR+xxx}" ]; then echo VAR is not set at all; fi
+if var_defined VISUAL; then
+$VISUAL ~/$BASH_SOURCE.txt
+else
+    echo "VISUAL is not defined"
+fi
+
+if var_defined EDITOR; then
+$EDITOR ~/$BASH_SOURCE.txt
+else
+    echo "EDITOR is not defined"
+fi
+
+
+nano ~/$BASH_SOURCE.txt
         exit  
 	;;
    view)
-       nano ~/$BASH_SOURCE.txt
+if var_defined VISUAL; then
+$VISUAL ~/$BASH_SOURCE.txt
+else
+    echo "VISUAL is not defined"
+fi
+
+if var_defined EDITOR; then
+$EDITOR ~/$BASH_SOURCE.txt
+else
+    echo "EDITOR is not defined"
+fi
+
         exit  
         ;;
 
