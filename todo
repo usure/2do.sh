@@ -99,7 +99,6 @@ esac
 #nl $file
 #fi
 
-
 #if [ -f $file ]
 #then
 #echo exists >> /dev/null 2>&1
