@@ -1,4 +1,4 @@
-NOTE: RUN ./todo.sh help first
+NOTE: RUN ./todo help first
 
 2do.sh is a todo shell script. Not to be confused with the project called: todo.txt
 If you want the cli version: use todo.sh
@@ -20,7 +20,7 @@ arch linux: sudo pacman -S nmap
 other: source.
 
 Then run:
-ncat -t -l 1234 --keep-open --sh-exec "~/2do/todo.sh"
+ncat -t -l 1234 --keep-open --sh-exec "~/2do/todo"
 
 I also included the ncat standalone binary in the server DIR.
 
