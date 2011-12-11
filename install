@@ -1,0 +1,12 @@
+#!/bin/bash
+  if [[ $UID -ne 0 ]]; then
+    echo "$0 must be run as root"
+    exit 1
+  fi
+dir=`pwd`
+echo "installing..."
+sudo ln -s $dir/todo /usr/bin/todo
+sudo ln -s $dir/todogtk.sh /usr/bin/todogtk
+
+echo "Done installing"
+

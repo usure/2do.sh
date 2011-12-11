@@ -9,17 +9,19 @@
 #DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 #if [ -z "${EDITOR+xxx}" ]; then echo VAR is not set at all; fi
 #if [ -z "${VISUAL+xxx}" ]; then echo VAR is not set at all; fi
+file=$(basename $BASH_SOURCE)
+
 var_defined() {
     local var_name=$1
     set | grep "^${var_name}=" 1>/dev/null
     return $?
 }
 
-if [ -f ~/$BASH_SOURCE.txt ]
+if [ -f ~/$file.txt ]
 then
 echo exists >> /dev/null 2>&1
 else
-touch ~/$BASH_SOURCE.txt
+touch ~/$file.txt
 fi
 
 case "$1" in
@@ -27,44 +29,43 @@ case "$1" in
  edit)
 #if [ -z "${EDITOR+xxx}" ]; then echo VAR is not set at all; fi
 if var_defined VISUAL; then
-$VISUAL ~/$BASH_SOURCE.txt
+$VISUAL ~/$file.txt
 else
-    echo "VISUAL is not defined"
+echo "VISUAL is not defined"
 fi
 
 if var_defined EDITOR; then
-$EDITOR ~/$BASH_SOURCE.txt
+$EDITOR ~/$file.txt
 else
-    echo "EDITOR is not defined"
+echo "EDITOR is not defined"
 fi
 
 
-nano ~/$BASH_SOURCE.txt
-        exit  
-	;;
+        exit
+;;
    view)
 if var_defined VISUAL; then
-$VISUAL ~/$BASH_SOURCE.txt
+$VISUAL ~/$file.txt
 else
-    echo "VISUAL is not defined"
+echo "VISUAL is not defined"
 fi
 
 if var_defined EDITOR; then
-$EDITOR ~/$BASH_SOURCE.txt
+$EDITOR ~/$file.txt
 else
-    echo "EDITOR is not defined"
+echo "EDITOR is not defined"
 fi
 
-        exit  
+exit
         ;;
 
   clear)
-     > ~/$BASH_SOURCE.txt
+     > ~/$file.txt
      exit
     ;;
 
-    add)    
-echo "$2" >> ~/$BASH_SOURCE.txt
+    add)
+echo "$2" >> ~/$file.txt
    exit
   ;;
 
@@ -81,7 +82,7 @@ echo "$2" >> ~/$BASH_SOURCE.txt
     echo "./todo.sh edit"
     echo "./todo.sh clear"
     echo "./todo.sh help"
-    echo "./todo.sh info" 
+    echo "./todo.sh info"
     echo "Please use quotes when you use the add command."
    exit
     ;;
@@ -110,22 +111,20 @@ while :
 do
 echo "What would you like to add to your todo list?"
 read todotext
-echo $todotext >> ~/$BASH_SOURCE.txt
+echo $todotext >> ~/$file.txt
 
 echo "Do you want to add anything else?"
 read yesorno
 addmore=$yesorno
 
 if [ "${yesorno^^*}" == "YES" ]; then
-echo "Ok"  >> /dev/null 2>&1
-#read todotext 
+echo "Ok" >> /dev/null 2>&1
+#read todotext
 #echo $todotext >> todo.txt
   elif [ "${yesorno^^*}" == "NO" ]; then
 exit
 else
 exit
-  fi
+fi
 
 done
-
-
