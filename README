@@ -1,5 +1,7 @@
 NOTE: RUN ./todo help first
 
+OPTIONAL:
+run ./install if you don't want to write: ./todo always. ^_^
 2do.sh is a todo shell script. Not to be confused with the project called: todo.txt
 If you want the cli version: use todo
 if you want the GTk version: use todogtk.sh
@@ -9,20 +11,7 @@ Enjoy.
 
 Collaborators: 
 TheShadowFog (Gregoryx12)
-
-
-
-
-
-Also. If you want to run a 'todo server' then install: nmap
-debian: sudo apt-get install nmap
-arch linux: sudo pacman -S nmap
-other: source.
-
-Then run:
-ncat -t -l 1234 --keep-open --sh-exec "~/2do/todo"
-
-I also included the ncat standalone binary in the server DIR.
+	
 
 Note: Please do not commit files until you are sure that they are free of any major bugs.
 
