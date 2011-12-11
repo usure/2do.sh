@@ -19,6 +19,13 @@ echo exists >> /dev/null 2>&1
 touch file
 fi
 
+#if [ -f ~/$BASH_SOURCE.txt ]
+#then
+#echo exists >> /dev/null 2>&1
+#else
+#touch ~/$BASH_SOURCE.txt
+#fi
+
 while :
 	do
 todotext=$(zenity --entry --text "What would you like to add to your todo list?" --entry-text "something"); 
