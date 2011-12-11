@@ -37,7 +37,7 @@ fi
 if var_defined EDITOR; then
 $EDITOR ~/$file.txt
 else
-echo "EDITOR is not defined"
+echo "EDITOR is not defined" >> /dev/null 2>&1
 fi
 
 
