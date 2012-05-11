@@ -11,7 +11,7 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-
+    
 #Made by Gregoryx12 aka TheShadowFog
 #if you want to use the GTK version. Run todogtk.sh
 #Thanks to the many people on stack overflow. :P
@@ -32,9 +32,9 @@ var_defined() {
 
 if [ -f ~/$file.txt ]
 then
-echo exists >> /dev/null 2>&1
+    echo exists >> /dev/null 2>&1
 else
-touch ~/$file.txt
+    touch ~/$file.txt
 fi
 
 case "$1" in
@@ -42,15 +42,15 @@ case "$1" in
  edit)
 #if [ -z "${EDITOR+xxx}" ]; then echo VAR is not set at all; fi
 if var_defined VISUAL; then
-$VISUAL ~/$file.txt
+    $VISUAL ~/$file.txt
 else
-echo "VISUAL is not defined"
+    echo "VISUAL is not defined"
 fi
 
 if var_defined EDITOR; then
-$EDITOR ~/$file.txt
+    $EDITOR ~/$file.txt
 else
-echo "EDITOR is not defined" >> /dev/null 2>&1
+    echo "EDITOR is not defined" >> /dev/null 2>&1
 fi
 
 
@@ -58,15 +58,15 @@ fi
 ;;
    view)
 if var_defined VISUAL; then
-$VISUAL ~/$file.txt
+    $VISUAL ~/$file.txt
 else
-echo "VISUAL is not defined"
+    echo "VISUAL is not defined"
 fi
 
 if var_defined EDITOR; then
-$EDITOR ~/$file.txt
+    $EDITOR ~/$file.txt
 else
-echo "EDITOR is not defined"
+    echo "EDITOR is not defined"
 fi
 
 exit
