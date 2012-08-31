@@ -5,8 +5,8 @@
   fi
 dir=`pwd`
 echo "installing..."
-sudo ln -s $dir/todo /usr/bin/todo
-sudo ln -s $dir/todogtk.sh /usr/bin/todogtk
+sudo ln -s $dir/todo /usr/local/bin/todo
+sudo ln -s $dir/todogtk.sh /usr/local/bin/todogtk
 
 echo "Done installing"
 

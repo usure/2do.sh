@@ -58,7 +58,7 @@ fi
 ;;
    view)
 if var_defined VISUAL; then
-    $VISUAL ~/$file.txt
+    cat ~/$file.txt
 else
     echo "VISUAL is not defined"
 fi
