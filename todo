@@ -57,17 +57,18 @@ fi
         exit
 ;;
    view)
-if var_defined VISUAL; then
-    cat ~/$file.txt
-else
-    echo "VISUAL is not defined"
-fi
+#if var_defined VISUAL; then
+   # cat ~/$file.txt
+#else
+#    echo "VISUAL is not defined"
+#fi
+cat ~/$file.txt
 
-if var_defined EDITOR; then
-    $EDITOR ~/$file.txt
-else
-    echo "EDITOR is not defined"
-fi
+#if var_defined EDITOR; then
+#    $EDITOR ~/$file.txt
+#else
+#    echo "EDITOR is not defined"
+#fi
 
 exit
         ;;
