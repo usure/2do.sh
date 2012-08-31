@@ -78,6 +78,16 @@ exit
      exit
     ;;
 
+    "")
+    echo "todo view"
+    echo "todo edit"
+    echo "todo clear"
+    echo "todo help"
+    echo "todo info"
+    echo "Please use quotes when you use the add command."
+   exit
+    ;;
+
     add)
 echo "$2" >> ~/$file.txt
    exit
@@ -104,41 +114,3 @@ echo "$2" >> ~/$file.txt
 
 esac
 #exit 0
-
-
-#if [ ! -s $file ]; then
-#echo "$file is empty"
-#else
-#echo "Your current todo.txt"
-#cat $file
-#nl $file
-#fi
-
-#if [ -f $file ]
-#then
-#echo exists >> /dev/null 2>&1
-#else
-#touch $file
-#fi
-
-while :
-do
-echo "What would you like to add to your todo list?"
-read todotext
-echo $todotext >> ~/$file.txt
-
-echo "Do you want to add anything else?"
-read yesorno
-addmore=$yesorno
-
-if [ "${yesorno^^*}" == "YES" ]; then
-echo "Ok" >> /dev/null 2>&1
-#read todotext
-#echo $todotext >> todo.txt
-  elif [ "${yesorno^^*}" == "NO" ]; then
-exit
-else
-exit
-fi
-
-done

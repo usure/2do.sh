@@ -4,9 +4,27 @@
     exit 1
   fi
 dir=`pwd`
-echo "installing..."
+
+case "$1" in
+
+ "")
+ echo "install"
+ echo "remove"
+        exit
+;;
+
+  install)
+  echo "installing..."
 sudo ln -s $dir/todo /usr/local/bin/todo
 sudo ln -s $dir/todogtk.sh /usr/local/bin/todogtk
 
 echo "Done installing"
 
+        exit
+;;
+   remove)
+sudo rm /usr/local/bin/todo
+sudo rm /user/local/bin/todogtk
+exit
+        ;;
+esac
