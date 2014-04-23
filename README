@@ -1,25 +1,11 @@
 NOTE: RUN ./todo help first
 
 OPTIONAL:
-run ./install if you don't want to write: ./todo always. ^_^
+run ./install if you don't want to write: ./todo every time you want to use it
 2do.sh is a todo shell script. Not to be confused with the project called: todo.txt
 If you want the cli version: use todo
 if you want the GTk version: use todogtk.sh
 
-For a list of things that you can do... Check out TODO.
-Enjoy.
-
-Collaborators: 
-TheShadowFog (Gregoryx12)
-	
-
-Note: Please do not commit files until you are sure that they are free of any major bugs.
-
->> email: game@notsharingmy.info <<
-
-The reason there are no packages for this script is because I wanted it 
-to work on all distros.  Also. I'm lazy :P
-
 Please use quotes when you use the add command.
 
-SITE: theshadowfog.com
+
